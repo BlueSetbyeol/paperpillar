@@ -21,7 +21,7 @@ export default function Navbar() {
       </section>
       <nav className="w-screen h-[46.6px] pt-5 px-7.5 flex flex-row justify-between items-center">
         <p className="font-bold leading-[14.8px]">ECOMMERCE</p>
-        <section className="hidden md:flex lg:flex flex-row justify-between w-full pl-3 text-[10px]">
+        <section className="hidden md:flex lg:flex flex-row justify-between w-full pl-3 text-[11px]">
           <div className="flex flex-row gap-3 items-center">
             <div className="rounded-2xl border-box-border border px-3 py-1 w-45 flex justify-between items-center">
               <input type="text" placeholder={"Search Here"} />
