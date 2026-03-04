@@ -1,4 +1,4 @@
-import likeIcon from "../assets/icons/heart_white.png";
+import likeIcon from "../../assets/icons/heart_white.png";
 
 interface TrendingImageProps {
   image: string;

@@ -1,6 +1,6 @@
 import Inspiration1 from "../assets/image/image 7.png";
 import Inspiration2 from "../assets/image/image 8.png";
-import HeroImage from "./heroImage";
+import HeroImage from "./ui/heroImage";
 
 export default function Inspirations() {
   return (

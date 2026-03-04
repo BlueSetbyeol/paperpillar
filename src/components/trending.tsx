@@ -4,7 +4,7 @@ import SkateboardShoe from "../assets/image/image 12.png";
 import BasketShoe from "../assets/image/image 14.png";
 import BasketBallShoe from "../assets/image/image 15.png";
 import SportWearShoe from "../assets/image/image 16.png";
-import TrendingImage from "./trendingImage";
+import TrendingImage from "./ui/trendingImage";
 
 export default function Trending() {
   const trendingMenu = ["SHORTS", "HAT", "JACKETS", "SHOES", "T-SHIRT"];

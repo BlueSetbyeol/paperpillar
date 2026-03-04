@@ -1,4 +1,4 @@
-import Arrow from "../assets/icons/short_right.png";
+import Arrow from "../../assets/icons/short_right.png";
 
 interface HeroImageProps {
   image: string;

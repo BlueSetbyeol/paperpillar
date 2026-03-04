@@ -3,8 +3,10 @@ import Search from "./../assets/icons/search.png";
 import Heart from "./../assets/icons/heart_black.png";
 import User from "./../assets/icons/user.png";
 import Shopping from "./../assets/icons/shopping_cart.png";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [openMenu, setOpenMenu] = useState(false);
   return (
     <header className="w-screen pb-4">
       <section className="hidden md:flex lg:flex flex-row justify-between items-center w-full px-7.5 py-3 min-h-7.75 text-[8px] font-light border border-secondary border-b-box-border">
@@ -19,7 +21,7 @@ export default function Navbar() {
           <p>Contact US</p>
         </div>
       </section>
-      <nav className="w-screen h-[46.6px] pt-5 px-7.5 flex flex-row justify-between items-center">
+      <nav className="w-screen h-[46.6px] pt-5 px-7.5 flex flex-row justify-between items-center static">
         <p className="font-bold leading-[14.8px]">ECOMMERCE</p>
         <section className="hidden md:flex lg:flex flex-row justify-between w-full pl-3 text-[11px]">
           <div className="flex flex-row gap-3 items-center">
@@ -45,13 +47,23 @@ export default function Navbar() {
             </button>
           </div>
         </section>
-        <button>
+        <button
+          type="button"
+          onClick={() => setOpenMenu(openMenu ? false : true)}
+        >
           <img
             src={BurgerMenu}
             alt="Menu Burger Phone"
             className="h-3 md:hidden lg:hidden"
           />
         </button>
+        {openMenu && (
+          <section className="z-3 absolute top-12 right-7 bg-[#f4f2f2cf] rounded-l p-3">
+            <p className="font-light">All Categories</p>
+            <p className="font-light">Gift Cards</p>
+            <p className="font-light">Special Event</p>
+          </section>
+        )}
       </nav>
     </header>
   );
