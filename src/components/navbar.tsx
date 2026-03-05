@@ -5,7 +5,11 @@ import User from "./../assets/icons/user.png";
 import Shopping from "./../assets/icons/shopping_cart.png";
 import { useState } from "react";
 
-export default function Navbar() {
+interface NavbarProps {
+  menuSmall: { title: string; content: string[] };
+}
+
+export default function Navbar({ menuSmall }: NavbarProps) {
   const [openMenu, setOpenMenu] = useState(false);
   return (
     <header className="w-screen pb-4">
@@ -59,9 +63,11 @@ export default function Navbar() {
         </button>
         {openMenu && (
           <section className="z-3 absolute top-12 right-7 bg-[#f4f2f2cf] rounded-l p-3">
-            <p className="font-light">All Categories</p>
-            <p className="font-light">Gift Cards</p>
-            <p className="font-light">Special Event</p>
+            {menuSmall.content.map((element, index) => (
+              <p className="font-light" key={index}>
+                {element}
+              </p>
+            ))}
           </section>
         )}
       </nav>

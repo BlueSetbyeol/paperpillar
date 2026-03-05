@@ -1,4 +1,4 @@
-import Card from "./card";
+import Card from "./ui/card";
 import IconHeart from "../assets/icons/icon-heart.png";
 import Return from "../assets/icons/return.png";
 import Tel from "../assets/icons/tel.png";
