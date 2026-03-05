@@ -9,7 +9,7 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   return (
     <header className="w-screen pb-4">
-      <section className="hidden md:flex lg:flex flex-row justify-between items-center w-full px-7.5 py-3 min-h-7.75 text-[8px] font-light border border-secondary border-b-box-border">
+      <section className="hidden md:flex lg:flex flex-row justify-between items-center w-full px-7.5 py-3 min-h-7.75 text-[10px] font-light border border-secondary border-b-box-border">
         <div className="flex flex-row gap-4">
           <p>English</p>
           <p>Dollar</p>
@@ -23,7 +23,7 @@ export default function Navbar() {
       </section>
       <nav className="w-screen h-[46.6px] pt-5 px-7.5 flex flex-row justify-between items-center static">
         <p className="font-bold leading-[14.8px]">ECOMMERCE</p>
-        <section className="hidden md:flex lg:flex flex-row justify-between w-full pl-3 text-[11px]">
+        <section className="hidden md:flex lg:flex flex-row justify-between w-full pl-3 text-[12px]">
           <div className="flex flex-row gap-3 items-center">
             <div className="rounded-2xl border-box-border border px-3 py-1 w-45 flex justify-between items-center">
               <input type="text" placeholder={"Search Here"} />
