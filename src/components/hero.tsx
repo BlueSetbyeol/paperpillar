@@ -11,6 +11,7 @@ export default function Hero() {
       <FullImage
         bgImage={Hero1bg}
         frontImage={Hero1}
+        fullImage={null}
         kicker={null}
         title={"Color of Summer Outfit"}
         content={"100+ Collections for your outfit inspirations in this summer"}

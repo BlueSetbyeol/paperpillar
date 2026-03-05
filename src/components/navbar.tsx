@@ -5,11 +5,15 @@ import User from "./../assets/icons/user.png";
 import Shopping from "./../assets/icons/shopping_cart.png";
 import { useState } from "react";
 
-export default function Navbar() {
+interface NavbarProps {
+  menuSmall: { title: string; content: string[] };
+}
+
+export default function Navbar({ menuSmall }: NavbarProps) {
   const [openMenu, setOpenMenu] = useState(false);
   return (
     <header className="w-screen pb-4">
-      <section className="hidden md:flex lg:flex flex-row justify-between items-center w-full px-7.5 py-3 min-h-7.75 text-[8px] font-light border border-secondary border-b-box-border">
+      <section className="hidden md:flex lg:flex flex-row justify-between items-center w-full px-7.5 py-3 min-h-7.75 text-[10px] font-light border border-secondary border-b-box-border">
         <div className="flex flex-row gap-4">
           <p>English</p>
           <p>Dollar</p>
@@ -23,7 +27,7 @@ export default function Navbar() {
       </section>
       <nav className="w-screen h-[46.6px] pt-5 px-7.5 flex flex-row justify-between items-center static">
         <p className="font-bold leading-[14.8px]">ECOMMERCE</p>
-        <section className="hidden md:flex lg:flex flex-row justify-between w-full pl-3 text-[11px]">
+        <section className="hidden md:flex lg:flex flex-row justify-between w-full pl-3 text-[12px]">
           <div className="flex flex-row gap-3 items-center">
             <div className="rounded-2xl border-box-border border px-3 py-1 w-45 flex justify-between items-center">
               <input type="text" placeholder={"Search Here"} />
@@ -59,9 +63,11 @@ export default function Navbar() {
         </button>
         {openMenu && (
           <section className="z-3 absolute top-12 right-7 bg-[#f4f2f2cf] rounded-l p-3">
-            <p className="font-light">All Categories</p>
-            <p className="font-light">Gift Cards</p>
-            <p className="font-light">Special Event</p>
+            {menuSmall.content.map((element, index) => (
+              <p className="font-light" key={index}>
+                {element}
+              </p>
+            ))}
           </section>
         )}
       </nav>

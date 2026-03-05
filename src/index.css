@@ -22,7 +22,7 @@ body {
 }
 
 @utility button_simple {
-  @apply rounded-2xl h-8 text-[9px] border-box-border border-2 min-w-17 px-3;
+  @apply rounded-2xl min-h-8 text-[9px] border-box-border border-2 min-w-17 px-3;
 }
 
 @utility button_cta {
@@ -30,7 +30,7 @@ body {
 }
 
 @utility full_image {
-  @apply w-full h-[70vh] rounded-2xl overflow-hidden relative;
+  @apply w-full h-151.25 rounded-2xl overflow-hidden relative;
 }
 
 @utility hero_article {

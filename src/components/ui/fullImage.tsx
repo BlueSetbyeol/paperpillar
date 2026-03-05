@@ -1,7 +1,7 @@
 interface FullImageProps {
   bgImage: string;
   frontImage: string;
-  fullImage: string;
+  fullImage: string | null;
   kicker: string | null;
   title: string;
   content: string;
@@ -37,7 +37,7 @@ export default function FullImage({
         alt={frontImage}
         className="z-1 w-full absolute inset-x-0 bottom-0 md:h-full"
       />
-      {!heroSection && (
+      {!heroSection && fullImage && (
         <img
           src={fullImage}
           alt={fullImage}
