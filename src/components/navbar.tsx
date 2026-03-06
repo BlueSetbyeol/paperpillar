@@ -7,13 +7,14 @@ import { useState } from "react";
 
 interface NavbarProps {
   menuSmall: { title: string; content: string[] };
+  categories: { title: string; content: string[] };
 }
 
-export default function Navbar({ menuSmall }: NavbarProps) {
+export default function Navbar({ menuSmall, categories }: NavbarProps) {
   const [openMenu, setOpenMenu] = useState(false);
   return (
     <header className="w-screen pb-4">
-      <section className="hidden md:flex lg:flex flex-row justify-between items-center w-full px-7.5 py-3 min-h-7.75 text-[10px] font-light border border-secondary border-b-box-border">
+      <section className="hidden md:flex lg:flex flex-row justify-between items-center w-full px-7.5 py-3 min-h-7.75 text-[11px] font-light border border-secondary border-b-box-border">
         <div className="flex flex-row gap-4">
           <p>English</p>
           <p>Dollar</p>
@@ -27,42 +28,58 @@ export default function Navbar({ menuSmall }: NavbarProps) {
       </section>
       <nav className="w-screen h-[46.6px] pt-5 px-7.5 flex flex-row justify-between items-center static">
         <p className="font-bold leading-[14.8px]">ECOMMERCE</p>
-        <section className="hidden md:flex lg:flex flex-row justify-between w-full pl-3 text-[12px]">
+        <section className="hidden md:flex lg:flex flex-row justify-between w-full pl-3 text-text">
           <div className="flex flex-row gap-3 items-center">
             <div className="rounded-2xl border-box-border border px-3 py-1 w-45 flex justify-between items-center">
-              <input type="text" placeholder={"Search Here"} />
+              <label htmlFor="searching_product" className="hidden" id="search">
+                Search a product here to find your requested items
+              </label>
+              <input
+                type="text"
+                id="searching_product"
+                placeholder={"Search Here"}
+                className="focus:outline-2 focus:outline-offset-2 focus:outline-favori-offered focus:rounded-2xl"
+                aria-labelledby="search"
+              />
               <img src={Search} alt="search icon" className="w-2 h-2" />
             </div>
-            <select name="All Category" id="All Category" className="font-bold">
-              <option value="">All Category</option>
+            <label
+              htmlFor="All_Category"
+              className="hidden"
+              id="select_category"
+            >
+              Select a category of object
+            </label>
+            <select
+              name="All Category"
+              id="All_Category"
+              className="font-bold"
+              aria-labelledby="select_category"
+            >
+              <option value="All Category">All Category</option>
+              {categories.content.map((category, index) => (
+                <option value={category} key={index}>
+                  {category}
+                </option>
+              ))}
             </select>
             <p className="font-bold">Gift Cards</p>
             <p className="font-bold">Special Event</p>
           </div>
-          <div className="flex flex-row gap-3">
-            <button>
-              <img src={Heart} alt="Favori icon" />
-            </button>
-            <button>
-              <img src={User} alt="User icon" />
-            </button>
-            <button>
-              <img src={Shopping} alt="Shopping cart icon" />
-            </button>
+          <div className="flex flex-row gap-3 items-center">
+            <img src={Heart} alt="Favori icon" className="size-3" />
+            <img src={User} alt="User icon" className="size-3" />
+            <img src={Shopping} alt="Shopping cart icon" className="size-3" />
           </div>
         </section>
-        <button
-          type="button"
+        <img
+          src={BurgerMenu}
+          alt="Menu Burger Phone"
+          className="h-3 size-6 md:hidden lg:hidden"
           onClick={() => setOpenMenu(openMenu ? false : true)}
-        >
-          <img
-            src={BurgerMenu}
-            alt="Menu Burger Phone"
-            className="h-3 md:hidden lg:hidden"
-          />
-        </button>
+        />
         {openMenu && (
-          <section className="z-3 absolute top-12 right-7 bg-[#f4f2f2cf] rounded-l p-3">
+          <section className="z-3 absolute top-12 right-7 bg-[#f4f2f2cf] rounded-l p-3 font-sans">
             {menuSmall.content.map((element, index) => (
               <p className="font-light" key={index}>
                 {element}

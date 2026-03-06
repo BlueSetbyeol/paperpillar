@@ -47,8 +47,10 @@ export default function FullImage({
       <article className="z-2 absolute inset-y-0 left-5 top-5 pr-5 md:left-8 md:top-8 md:w-[40%]">
         {!heroSection && (
           <div>
-            <h3 className="text-secondary font-extralight mb-2">{kicker}</h3>
-            <h2 className="text-secondary font-light text-4xl mb-4">{title}</h2>
+            <p className="text-secondary font-extralight mb-2">{kicker}</p>
+            <h2 className="text-secondary font-light text-title-h2 mb-4">
+              {title}
+            </h2>
           </div>
         )}
         {heroSection && (
@@ -59,8 +61,8 @@ export default function FullImage({
         </p>
         {!heroSection && (
           <div className="flex flex-col text-secondary">
-            <h4>{name}</h4>
-            <p className="font-extralight text-[9px] mt-1">{job}</p>
+            <h4 className="text-title-h4">{name}</h4>
+            <p className="font-extralight text-text mt-1">{job}</p>
           </div>
         )}
         {heroSection && (

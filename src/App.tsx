@@ -36,8 +36,8 @@ function App() {
 
   return (
     <>
-      <Navbar menuSmall={AllMenus[1]} />
-      <main className="w-screen px-6">
+      <Navbar menuSmall={AllMenus[1]} categories={AllMenus[0]} />
+      <main className="w-screen px-6 font-sans">
         <Hero />
         <Inspirations />
         <Trending />

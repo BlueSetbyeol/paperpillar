@@ -19,14 +19,18 @@ body {
   --color-favori-offered: #888787;
   --color-box-border: #f4f2f2;
   --font-sans: "Inter", sans-serif;
+  --text-title-h2: 36px;
+  --text-title-h3: 28px;
+  --text-title-h4: 20px;
+  --text-text: 12px;
 }
 
 @utility button_simple {
-  @apply rounded-2xl min-h-8 text-[9px] border-box-border border-2 min-w-17 px-3;
+  @apply rounded-2xl min-h-8 text-[10px] border-box-border border-2 min-w-17 px-3;
 }
 
 @utility button_cta {
-  @apply rounded-2xl h-8 w-[65%] text-[9px];
+  @apply rounded-2xl h-8 w-[65%] text-[10px];
 }
 
 @utility full_image {
@@ -38,7 +42,7 @@ body {
 }
 
 @utility hero_title {
-  @apply text-main font-light text-[23px] mb-4 md:w-[50%] md:text-2xl;
+  @apply text-main font-light text-title-h2 mb-4 md:w-[50%];
 }
 
 @utility inspiration_article {
@@ -46,7 +50,7 @@ body {
 }
 
 @utility inspiration_title {
-  @apply text-secondary font-light text-[23px] w-[50%] text-2xl;
+  @apply text-secondary font-light text-title-h2 w-[50%];
 }
 
 @utility selected_like {

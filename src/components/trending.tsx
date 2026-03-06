@@ -9,9 +9,9 @@ import TrendingImage from "./ui/trendingImage";
 export default function Trending() {
   const trendingMenu = ["SHORTS", "HAT", "JACKETS", "SHOES", "T-SHIRT"];
   return (
-    <section className="mb-8 pt-4 border-box-border border-t border-0">
+    <section className="mb-8 pt-4 border-box-border border-t border-0 font-sans">
       <section className="w-full flex flex-col justify-start md:flex-row md:justify-between ">
-        <h2>Trending</h2>
+        <h3 className="text-title-h3">Trending</h3>
         <section className="overflow-x-auto relative shrink-0 flex flex-row gap-2 mb-4 md:h-[49%] md:w-auto">
           {trendingMenu.map((element, index) => (
             <button

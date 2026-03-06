@@ -7,10 +7,10 @@ interface MenuFooterProps {
 
 export default function MenuFooter({ menu }: MenuFooterProps) {
   return (
-    <section>
-      <h3 className="text-[11px] font-medium">{menu.title}</h3>
+    <section className="w-[30vw] md:w-auto">
+      <p className="text-[13px] font-medium">{menu.title}</p>
       {menu.content.map((items, index) => (
-        <p key={index} className="text-[10px] font-extralight mt-3">
+        <p key={index} className="text-text font-extralight mt-3">
           {items}
         </p>
       ))}
