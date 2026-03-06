@@ -27,8 +27,8 @@ export default function Reasons() {
   ];
 
   return (
-    <section className="my-8">
-      <h2 className="text-left text-highlight text-4xl font-light">
+    <section className="my-8 font-sans">
+      <h2 className="text-left text-highlight text-title-h2 font-light">
         Why you’ll love to shop on our website
       </h2>
       <article className="w-full flex flex-col gap-4 items-center md:flex-row my-4">
@@ -42,7 +42,7 @@ export default function Reasons() {
           </div>
         ))}
       </article>
-      <h3 className="text-left text-highlight text-3xl font-light mt-12 mb-4">
+      <h3 className="text-left text-highlight text-title-h3 mt-12 mb-4">
         From The Blog
       </h3>
       <article className="min-h-82 w-full gap-4 flex flex-col items-start md:flex-row">
@@ -52,7 +52,7 @@ export default function Reasons() {
           className="rounded-2xl w-full md:w-1/2 mb-4"
         />
         <section className="md:w-1/2 md:h-80 lg:h-94.5 flex flex-col justify-between">
-          <h2 className="text-left text-highlight text-4xl font-normal">
+          <h2 className="text-left text-highlight text-title-h2 font-normal">
             How to combine your daily outfit to looks fresh and cool.
           </h2>
           <p className="text-[14px] font-light my-4">

@@ -22,8 +22,8 @@ export default function TrendingImage({
         </div>
       </article>
       <aside>
-        <h3>{name}</h3>
-        <p className="font-light text-[11px]">{price} $</p>
+        <p className="text-[16px]">{name}</p>
+        <p className="font-light text-text">{price} $</p>
       </aside>
     </section>
   );

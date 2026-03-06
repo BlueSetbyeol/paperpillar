@@ -4,12 +4,12 @@ import HeroImage from "./ui/heroImage";
 
 export default function Inspirations() {
   return (
-    <section className="w-full mt-8 mb-4 md:flex lg:flex md:h-[30vh] lg:h-[30vh]">
+    <section className="w-full mt-8 mb-4 md:flex lg:flex md:h-[30vh] lg:h-[30vh] font-sans">
       <article className="w-full pr-7 md:w-[30%] lg:w-[30%] h-full flex flex-col justify-between">
-        <h2 className="text-left text-highlight text-5xl font-light">
+        <h2 className="text-left text-highlight text-title-h2 font-light">
           Casual Inspirations
         </h2>
-        <p className="text-left text-highlight font-light ">
+        <p className="text-left text-highlight font-light text-text">
           Our favorite combinations for casual outfit that can inspire you to
           apply on your daily activity.
         </p>

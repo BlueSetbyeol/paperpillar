@@ -7,7 +7,7 @@ import HeroImage from "./ui/heroImage";
 
 export default function Hero() {
   return (
-    <section className="w-full flex flex-col md:flex-row gap-2 md:h-151.25">
+    <section className="w-full flex flex-col md:flex-row gap-2 md:h-151.25 font-sans">
       <FullImage
         bgImage={Hero1bg}
         frontImage={Hero1}

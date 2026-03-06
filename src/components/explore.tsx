@@ -23,8 +23,8 @@ export default function Explore() {
   ];
   return (
     <section className="my-4 flex flex-col gap-6">
-      <aside className="w-full flex flex-col md:flex-row md:justify-between">
-        <h2 className="text-[16px]">Explore by Colors</h2>
+      <aside className="w-full flex flex-col md:flex-row md:justify-between font-sans">
+        <h3 className="text-title-h3">Explore by Colors</h3>
         <div className="flex flex-row flex-wrap gap-1 md:gap-3 md:justify-end">
           {exploreMenu.map((element, index) => (
             <button
